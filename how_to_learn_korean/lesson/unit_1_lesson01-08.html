@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 1 Lesson1-8 | How To Study Korean</title>
+        <link rel="stylesheet" href="../style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="../img/icon.png">
+    </head>
+    <body>
+        <div class="btn">
+            <span class="fas fa-bars"></span>
+        </div>
+        <nav class="sidebar">
+            <div class="text">
+                Menu
+            </div>
+            <ul>
+                <li class="active"><a href="../index.html">Unit 1 Lesson1-8</a></li>
+                <li>
+                    <a href="#" class="ls-btn">Lessons
+                    <span class="fas fa-caret-down first"></span>
+                    </a>
+                    <ul class="ls-show">
+                        <li><a href="#">Unit 0 Learning How to Read</a></li>
+                        <li><a href="unit_1.html">Unit 1 Basic Grammar</a></li>
+                        <li><a href="#">Unit 2 Lower-Intermediate Grammar</a></li>
+                        <li><a href="#">Unit 3 Intermediate Grammar</a></li>
+                        <li><a href="#">Unit 4 Upper-Intermediate Grammar</a></li>
+                        <li><a href="#">Unit 5 Lower-Advanced Grammar</a></li>
+                        <li><a href="#">Unit 6 Advanced Grammar</a></li>
+                        <li><a href="#">Unit 7 Upper-Advanced Grammar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="hanja-btn">Hanja
+                    <span class="fas fa-caret-down second"></span>
+                    </a>
+                    <ul class="hanja-show">
+                        <li><a href="#">Unit 1 Lession 01-20</a></li>
+                        <li><a href="#">Unit 2 Lession 21-40</a></li>
+                        <li><a href="#">Unit 3 Lession 41-60</a></li>
+                        <li><a href="#">Unit 4 Lession 61-80</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="other-btn">Others
+                    <span class="fas fa-caret-down third"></span>
+                    </a>
+                    <ul class="other-show">
+                        <li><a href="#">About</a></li>
+                        <li><a href="../content/faq.html">FAQ</a></li>
+                        <li><a href="#">Lesson List</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Mobile App</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img style="width: 100%;" src="../img/banner.png" alt="">
+        </div>
+
+        <main id="main" class="content_area">
+            <h1 class="headline">UNIT 1: Basic Korean Grammar Lesson1-8</h1>
+            <div class="content_inner">
+                <article id="post-11">
+                    <div class="card-container">
+                        <div class="card lecture"><a href="./lesson01.html">
+                            <div class="card--display"><i class="material-icons">Lesson 1</i>
+                                <h2>30 words <br>Parts of speech, 아다 <br>Sentence word order</h2>
+                            </div>
+                            <div class="card--hover">
+                                <h2>Unit 1: Lesson 1</h2>
+                                <p>n this lesson, you will learn the basic structure in Korean sentences and how to create sentences using the word 이다 (to be). Using 이다, you will learn how to create sentences like “that man is a teacher” and “this thing is a pen.” In addition, some essential grammar notes will be presented to get you started correctly in your path to learn Korean!</p>
+                                <p class="link"> > Click to learn this lesson</p>
+                            </div></a>
+                            <div class="card--border"></div>
+                        </div>
+                     
+                </article>
+            </div>
+        </main>
+        <script>
+            $('.btn').click(function(){
+              $(this).toggleClass("click");
+              $('.sidebar').toggleClass("show");
+            });
+              $('.ls-btn').click(function(){
+                $('nav ul .ls-show').toggleClass("show");
+                $('nav ul .first').toggleClass("rotate");
+              });
+              $('.hanja-btn').click(function(){
+                $('nav ul .hanja-show').toggleClass("show1");
+                $('nav ul .second').toggleClass("rotate");
+              });
+              $('.other-btn').click(function(){
+                $('nav ul .other-show').toggleClass("show2");
+                $('nav ul .third').toggleClass("rotate");
+              });
+              $('nav ul li').click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+              });
+
+            function playAudio(audioUrl) {
+                var audioPlayer = new Audio(audioUrl);
+                audioPlayer.play();
+            }
+        </script>
+    </body>
+  </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>How To Study Korean</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="./img/icon.png">
+    </head>
+    <body>
+        <audio id="music" autoplay loop>
+            <source src="./src/anysong.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="btn">
+            <span class="fas fa-bars"></span>
+        </div>
+        <nav class="sidebar">
+            <div class="text">
+                Menu
+            </div>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="ls-btn">Lessons
+                    <span class="fas fa-caret-down first"></span>
+                    </a>
+                    <ul class="ls-show">
+                        <li><a href="#">Unit 0 Learning How to Read</a></li>
+                        <li><a href="./lesson/unit_1.html">Unit 1 Basic Grammar</a></li>
+                        <li><a href="#">Unit 2 Lower-Intermediate Grammar</a></li>
+                        <li><a href="#">Unit 3 Intermediate Grammar</a></li>
+                        <li><a href="#">Unit 4 Upper-Intermediate Grammar</a></li>
+                        <li><a href="#">Unit 5 Lower-Advanced Grammar</a></li>
+                        <li><a href="#">Unit 6 Advanced Grammar</a></li>
+                        <li><a href="#">Unit 7 Upper-Advanced Grammar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="hanja-btn">Hanja
+                    <span class="fas fa-caret-down second"></span>
+                    </a>
+                    <ul class="hanja-show">
+                        <li><a href="#">Unit 1 Lession 01-20</a></li>
+                        <li><a href="#">Unit 2 Lession 21-40</a></li>
+                        <li><a href="#">Unit 3 Lession 41-60</a></li>
+                        <li><a href="#">Unit 4 Lession 61-80</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="other-btn">Others
+                    <span class="fas fa-caret-down third"></span>
+                    </a>
+                    <ul class="other-show">
+                        <li><a href="#">About</a></li>
+                        <li><a href="./content/faq.html">FAQ</a></li>
+                        <li><a href="#">Lesson List</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Mobile App</a></li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <img style="width: 100%;" src="./img/banner.png" alt="">
+        </div>
+        <div class="content">
+            <div class="header">
+                Welcome to <br>How to Study Korean!
+            </div>
+            <p>
+                EVERYTHING about Korean.
+            </p>
+            <br>
+            <a href="home.html"><button class="start_btn" role="button">START THE JOURNEY</button></a>
+        </div>
+        <button id="music_btn" class="play-button">🎵</button>
+        <script>
+            var music = document.getElementById("music");
+            var musicBtn = document.getElementById("music_btn");
+
+            musicBtn.addEventListener("click", function() {
+                if (music.paused) {
+                    music.play();
+                    musicBtn.textContent = "Pause Music";
+                } else {
+                    music.pause();
+                    musicBtn.textContent = "Play Music";
+                }
+            });
+
+
+            $('.btn').click(function(){
+              $(this).toggleClass("click");
+              $('.sidebar').toggleClass("show");
+            });
+              $('.ls-btn').click(function(){
+                $('nav ul .ls-show').toggleClass("show");
+                $('nav ul .first').toggleClass("rotate");
+              });
+              $('.hanja-btn').click(function(){
+                $('nav ul .hanja-show').toggleClass("show1");
+                $('nav ul .second').toggleClass("rotate");
+              });
+              $('.other-btn').click(function(){
+                $('nav ul .other-show').toggleClass("show2");
+                $('nav ul .third').toggleClass("rotate");
+              });
+              $('nav ul li').click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+              });
+        </script>
+    </body>
+</html>
