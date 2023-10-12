@@ -74,6 +74,8 @@ body {
   --BG_L: #fff;
   --BG_L2: #f5f5f7;
   --BG_FADE: rgb(40, 40, 40);
+  --BG_ORANGE: rgba(255, 90, 0, 1);
+  --BG_ORANGE-FADE: rgba(255, 90, 0, 0.9);
 
   --BGIMAGE: linear-gradient(
     to bottom,
@@ -645,7 +647,7 @@ nav .desktop-nav li a:hover {
 .button-2 {
   align-items: center;
   background-clip: padding-box;
-  background-color: #fa6400;
+  background-color: var(--BG_ORANGE);
   border: 1px solid transparent;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -676,7 +678,7 @@ nav .desktop-nav li a:hover {
 
 .button-2:hover,
 .button-2:focus {
-  background-color: #fb8332;
+  background-color: var(--BG_ORANGE-FADE);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
