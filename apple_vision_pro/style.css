@@ -45,7 +45,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-color: var(--BG_D);
+  background-color: var(--BLACK);
 }
 
 /* || UTILITY CLASSES */
@@ -69,29 +69,31 @@ body {
   --FS_FOTTER: 0.9vw;
 
   /* COLORS */
-  --BG_D: rgb(0, 0, 0);
-  --BG_D2: rgb(14, 14, 14);
-  --BG_L: #fff;
-  --BG_L2: #f5f5f7;
-  --BG_FADE: rgb(40, 40, 40);
-  --BG_ORANGE: rgba(255, 90, 0, 1);
-  --BG_ORANGE-FADE: rgba(255, 90, 0, 0.9);
+  --BLACK: rgb(0, 0, 0);
+  --GRAY10: #1d1d1f;
+  --GRAY15: #272729;
+  --GRAY20: #333333;
+  --GRAY22: #424245;
+  --GRAY24: #515154;
+  --GRAY26: #555555;
+  --GRAY30: #6e6e73;
+  --GRAY35: #757675;
+  --GRAY35: #86868b;
+  --GRAY45: #d2d2d7;
+  --GRAY50: #d6d6d6;
+  --GRAY60: #f5f5f7;
+  --WHITE: #fff;
+  --MANDARIN: #ff5a00;
+  --MANDARIN-FADE: rgba(255, 90, 0, 0.9);
+  --INDIGO: #0066cc;
 
   --BGIMAGE: linear-gradient(
     to bottom,
     var(var(--BGCOLOR), var(var(--BGCOLOR_FADE)))
   );
-  --FC_D: #fff;
-  --FC_L: #000;
-  --FC_LINK: #444;
-  --FC_FADE: #86868b;
-  --FC_FADE2: #9e9e9e;
-  --FC_FADE3: #d2d2d7;
-  --BLUE: #0066cc;
-  --BORDER-COLOR: #333;
 
   /* BORDERS */
-  --BORDERS: 1px solid var(--BORDER-COLOR);
+  --BORDERS: 1px solid var(--GRAY20);
 
   /* STANDARD PADDING */
   --PADDING-TB: 0.25em;
@@ -118,7 +120,7 @@ body {
 /* Desktop Nav */
 
 .nav-container {
-  background: var(--BG_D);
+  background: var(--BLACK);
   height: 44px;
   z-index: 300;
   position: sticky !important;
@@ -143,7 +145,7 @@ nav .desktop-nav {
 }
 
 nav .desktop-nav li a {
-  color: var(--FC_D);
+  color: var(--WHITE);
   text-decoration: none;
   font-size: 14px;
   opacity: 0.8;
@@ -199,7 +201,7 @@ nav .desktop-nav li a:hover {
 .second-menu {
   width: 1000px;
   height: 500px;
-  background-color: var(--BG_D);
+  background-color: var(--BLACK);
   position: fixed;
   top: 44px;
   padding-left: 20px;
@@ -221,13 +223,13 @@ nav .desktop-nav li a:hover {
 
 .second-menu-header {
   font-size: 12px;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   font-weight: 400;
 }
 
 .second-menu-clomun li a {
   font-size: 12px;
-  color: var(--FC_D);
+  color: var(--WHITE);
   font-weight: 500;
   text-decoration: none;
 }
@@ -245,7 +247,7 @@ nav .desktop-nav li a:hover {
 
 .search-container {
   width: 100%;
-  background-color: var(--BG_D);
+  background-color: var(--BLACK);
 }
 
 .search-container .search-bar {
@@ -265,7 +267,7 @@ nav .desktop-nav li a:hover {
 }
 
 .search-container * {
-  background-color: var(--BG_D);
+  background-color: var(--BLACK);
 }
 
 .search-container .link-search {
@@ -297,7 +299,7 @@ nav .desktop-nav li a:hover {
   height: 44px;
   border: 0;
   outline: none;
-  color: var(--FC_D);
+  color: var(--WHITE);
   font-family: var(--FF);
   font-weight: 600;
   font-size: 24px;
@@ -345,7 +347,7 @@ nav .desktop-nav li a:hover {
   height: 44px;
   border: 0;
   outline: none;
-  color: var(--FC_D);
+  color: var(--WHITE);
   font-family: var(--FF);
   font-weight: 600;
   font-size: 24px;
@@ -375,7 +377,7 @@ nav .desktop-nav li a:hover {
 /* Quick Links */
 
 .search-container .quick-links {
-  background-color: var(--BG_D);
+  background-color: var(--BLACK);
   position: absolute;
   left: 0;
   right: 0;
@@ -387,7 +389,7 @@ nav .desktop-nav li a:hover {
 .search-container .quick-links h2 {
   text-transform: capitalize;
   font-size: 12px;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   margin: 0 32px;
   margin-top: 10px;
 }
@@ -400,7 +402,7 @@ nav .desktop-nav li a:hover {
 
 .search-container .quick-links ul li a::before {
   content: "→";
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   font-weight: bold;
   margin-right: 10px;
 }
@@ -410,14 +412,14 @@ nav .desktop-nav li a:hover {
   width: 100%;
   padding: 8px 30px;
   font-size: 14px;
-  color: var(--FC_D);
+  color: var(--WHITE);
   text-decoration: none;
   font-weight: 400;
 }
 
 .search-container .quick-links ul li a:hover {
-  background: var(--FC_LINK);
-  color: var(--FC_D);
+  background: var(--GRAY26);
+  color: var(--WHITE);
 }
 
 /* Desktop Nav Animation */
@@ -597,18 +599,18 @@ nav .desktop-nav li a:hover {
 .action-banner .product-name {
   font-size: 22px;
   font-weight: 500;
-  color: var(--FC_D);
+  color: var(--WHITE);
   text-align: left;
 }
 
 .button-1 {
   max-width: 100px;
   appearance: none;
-  border: 1px solid var(--FC_L);
+  border: 1px solid var(--BLACK);
   border-radius: 2em;
   box-sizing: border-box;
-  background-color: var(--BG_L);
-  color: var(--FC_L);
+  background-color: var(--WHITE);
+  color: var(--BLACK);
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -633,7 +635,7 @@ nav .desktop-nav li a:hover {
 
 .button-1:hover {
   color: #fff;
-  background-color: var(--BG_D2);
+  background-color: var(--GRAY10);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
   transition: 0.5s;
@@ -647,7 +649,7 @@ nav .desktop-nav li a:hover {
 .button-2 {
   align-items: center;
   background-clip: padding-box;
-  background-color: var(--BG_ORANGE);
+  background-color: var(--MANDARIN);
   border: 1px solid transparent;
   border-radius: 50px;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -678,7 +680,7 @@ nav .desktop-nav li a:hover {
 
 .button-2:hover,
 .button-2:focus {
-  background-color: var(--BG_ORANGE-FADE);
+  background-color: var(--MANDARIN-FADE);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
@@ -694,7 +696,7 @@ nav .desktop-nav li a:hover {
 
 .button-3 {
   align-items: center;
-  border: 1px solid var(--FC_D);
+  border: 1px solid var(--WHITE);
   background-clip: padding-box;
   background-color: #ffffff;
   border-radius: 50px;
@@ -798,7 +800,7 @@ h1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
 }
 
 #intro1 > video {
@@ -809,7 +811,7 @@ h1 {
 
 #intro1 > h1 {
   font-size: 4vw;
-  color: var(--FC_D);
+  color: var(--WHITE);
   font-weight: 700;
   position: absolute;
   bottom: 40%;
@@ -837,14 +839,14 @@ h1 {
   transform: translateX(-50%);
   white-space: nowrap;
   text-align: center;
-  color: var(--FC_D);
+  color: var(--WHITE);
 }
 
 #page3 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
 }
 #page3 h1 {
   text-align: center;
@@ -892,7 +894,7 @@ h1 {
   padding-top: 3vh;
   font-weight: 600;
   font-size: 1.3vw;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
 }
 #page3-upper-inner a:hover,
 #page3-upper-innera:focus,
@@ -917,7 +919,7 @@ h1 {
 }
 #page3 > button:hover {
   color: #fff;
-  background-color: var(--BG_D2);
+  background-color: var(--GRAY10);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transition: 0.6s;
 }
@@ -941,12 +943,12 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: var(--FC_D);
+  color: var(--WHITE);
   font-size: 2vw;
 }
 
 #page5 {
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   display: flex;
   position: relative;
   height: 50vh;
@@ -984,7 +986,7 @@ h1 {
   font-weight: 500;
   line-height: 1.5em;
   width: 100%;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   margin-bottom: 2vh;
 }
 
@@ -1008,7 +1010,7 @@ h1 {
   position: relative;
   height: 70vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page6 > h3 {
   margin-bottom: 1vw;
@@ -1022,7 +1024,7 @@ h1 {
   font-size: 1.8vw;
   width: 60%;
   font-weight: 600;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
 }
 
 /* Start of Rotating Feature Image */
@@ -1030,7 +1032,7 @@ h1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 
 #page7 > canvas {
@@ -1044,7 +1046,7 @@ h1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page8 > h1 {
   width: 16%;
@@ -1052,20 +1054,20 @@ h1 {
   transform: translateY(-50%);
   left: 10%;
   font-size: 1.3vw;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   z-index: 99;
   position: absolute;
   font-weight: 500;
 }
 #page8 > h1 > span {
-  color: var(--FC_L);
+  color: var(--BLACK);
   font-weight: 600;
 }
 #page9 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page9 > h1 {
   width: 16%;
@@ -1073,19 +1075,19 @@ h1 {
   transform: translateY(-50%);
   right: 10%;
   font-size: 1.3vw;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   z-index: 99;
   position: absolute;
   font-weight: 500;
 }
 #page9 > h1 > span {
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 #page10 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page10 > h1 {
   width: 16%;
@@ -1093,19 +1095,19 @@ h1 {
   transform: translateY(-50%);
   left: 10%;
   font-size: 1.3vw;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   z-index: 99;
   position: absolute;
   font-weight: 500;
 }
 #page10 > h1 > span {
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 #page11 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page11 > h1 {
   width: 16%;
@@ -1113,19 +1115,19 @@ h1 {
   transform: translateY(-50%);
   right: 10%;
   font-size: 1.3vw;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   z-index: 99;
   position: absolute;
   font-weight: 500;
 }
 #page11 > h1 > span {
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 #page12 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page12 > h1 {
   width: 16%;
@@ -1133,19 +1135,19 @@ h1 {
   transform: translateY(-50%);
   left: 10%;
   font-size: 1.3vw;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   z-index: 99;
   position: absolute;
   font-weight: 500;
 }
 #page12 > h1 > span {
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 #page13 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 #page13 > h1 {
   width: 16%;
@@ -1153,13 +1155,13 @@ h1 {
   transform: translateY(-50%);
   right: 10%;
   font-size: 1.3vw;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   z-index: 99;
   position: absolute;
   font-weight: 500;
 }
 #page13 > h1 > span {
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 #page14 {
   display: flex;
@@ -1168,7 +1170,7 @@ h1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 .left14 {
   height: 90%;
@@ -1191,7 +1193,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
 }
 #center-page15 {
   height: 90%;
@@ -1212,14 +1214,14 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
 }
 #page16 > h2 {
   font-size: 1.6vw;
   line-height: 2.1vw;
   position: absolute;
   width: 50%;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   font-weight: 600;
   top: 8%;
   text-align: center;
@@ -1249,7 +1251,7 @@ h1 {
   justify-content: center;
   flex-direction: column;
   background-color: #000;
-  color: var(--FC_D);
+  color: var(--WHITE);
 }
 #page17 > h4 {
   font-size: 2vw;
@@ -1271,7 +1273,7 @@ h1 {
   text-align: center;
 }
 #page17 > p > span {
-  color: var(--BG_L2);
+  color: var(--GRAY60);
 }
 
 #page18 {
@@ -1290,7 +1292,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--FC_D);
+  color: var(--WHITE);
   position: relative;
   height: 30vh;
   width: 100vw;
@@ -1303,11 +1305,11 @@ h1 {
   padding-top: 3vh;
   width: 35%;
   font-weight: 500;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
 }
 
 #page19 span {
-  color: var(--FC_D);
+  color: var(--WHITE);
 }
 
 #page20 {
@@ -1327,7 +1329,7 @@ h1 {
   width: 30%;
   bottom: 35%;
   right: 10%;
-  color: var(--FC_D);
+  color: var(--WHITE);
 }
 #center-page20 > h1 {
   margin-bottom: 1.7vw;
@@ -1343,7 +1345,7 @@ h1 {
 }
 
 #center-page20 span {
-  color: var(--FC_D);
+  color: var(--WHITE);
 }
 
 #page21 {
@@ -1392,7 +1394,7 @@ h1 {
 #page21 span,
 #page22 span,
 #page23 span {
-  color: var(--FC_D);
+  color: var(--WHITE);
 }
 
 #page22 {
@@ -1433,7 +1435,7 @@ h1 {
 }
 
 #page24 {
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   width: 100vw;
   height: 80vw;
   display: flex;
@@ -1450,14 +1452,14 @@ h1 {
 
 #page24 > h5 {
   font-size: 1.6vw;
-  color: var(--FC_L);
+  color: var(--BLACK);
   margin-bottom: 20px;
 }
 
 #page24 > h1 {
   font-size: 6vw;
   line-height: 1.15;
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 
 #page24 > h3 {
@@ -1466,20 +1468,20 @@ h1 {
   font-size: 1.9vw;
   font-weight: 600;
   line-height: 1.6;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   margin-bottom: 5vh;
 }
 
 #page24 span {
-  color: var(--FC_L);
+  color: var(--BLACK);
 }
 
 #page25 {
-  background-color: var(--BG_L2);
-  border-left: 5vw solid var(--BG_L);
-  border-right: 5vw solid var(--BG_L);
-  border-bottom: 1vw solid var(--BG_L);
-  border-top: 1vw solid var(--BG_L);
+  background-color: var(--GRAY60);
+  border-left: 5vw solid var(--WHITE);
+  border-right: 5vw solid var(--WHITE);
+  border-bottom: 1vw solid var(--WHITE);
+  border-top: 1vw solid var(--WHITE);
   padding: 0 5vw;
   padding-bottom: 0;
   width: 100vw;
@@ -1514,7 +1516,7 @@ h1 {
   padding: 20px;
   font-size: 1.8vw;
   font-weight: 600;
-  color: var(--FC_FADE2);
+  color: var(--GRAY40);
   text-align: left;
 }
 .right25 {
@@ -1530,12 +1532,12 @@ h1 {
 }
 
 #page26 {
-  background-color: var(--BG_L2);
-  background-color: var(--BG_L2);
-  border-left: 5vw solid var(--BG_L);
-  border-right: 5vw solid var(--BG_L);
-  border-bottom: 4vw solid var(--BG_L);
-  border-top: 3vw solid var(--BG_L);
+  background-color: var(--GRAY60);
+  background-color: var(--GRAY60);
+  border-left: 5vw solid var(--WHITE);
+  border-right: 5vw solid var(--WHITE);
+  border-bottom: 4vw solid var(--WHITE);
+  border-top: 3vw solid var(--WHITE);
   padding: 0 5vw;
   padding-bottom: 0;
   width: 100vw;
@@ -1563,13 +1565,13 @@ h1 {
   padding: 20px;
   font-size: 1.75vw;
   font-weight: 400;
-  color: var(--FC_L);
+  color: var(--BLACK);
   text-align: center;
   width: 95%;
 }
 
 #page26 a {
-  color: var(--BLUE);
+  color: var(--INDIGO);
   font-size: min(20px, 2.5vw);
 }
 
@@ -1582,7 +1584,7 @@ h1 {
   z-index: 1000000;
   display: block;
   overflow: visible;
-  background-color: var(--BG_L2);
+  background-color: var(--GRAY60);
 }
 
 #footer a {
@@ -1591,12 +1593,12 @@ h1 {
 
 .footer-info a {
   text-decoration: underline;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
 }
 
 .footer-more-ways a {
   text-decoration: underline;
-  color: var(--BLUE);
+  color: var(--INDIGO);
 }
 
 #footer a:hover {
@@ -1607,12 +1609,12 @@ h1 {
   padding: 0 22px;
   padding-bottom: 21px;
   overflow: hidden;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   font-size: var(--FS_FOTTER);
   font-weight: 400;
   position: relative;
   z-index: 1;
-  background: var(--BG_L2);
+  background: var(--GRAY60);
   margin-bottom: 6px;
   margin-top: 0;
 }
@@ -1652,12 +1654,12 @@ input[type="checkbox"] {
 }
 
 #footer h3 {
-  color: var(--FC_L);
+  color: var(--BLACK);
   font-size: var(--FS_FOTTER);
   font-weight: 600;
   position: relative;
   z-index: 1;
-  background: var(--BG_L2);
+  background: var(--GRAY60);
   margin-bottom: 6px;
   margin-top: 0;
 }
@@ -1708,7 +1710,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
 .footer-more-ways {
   margin-bottom: 7px;
   padding-bottom: 6px;
-  border-bottom: 1px solid var(--FC_FADE3);
+  border-bottom: 1px solid var(--GRAY45);
 }
 
 .nowrap {
@@ -1718,7 +1720,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
 /* Carousel Between Page 16 and 17 */
 
 #page-a1 {
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   display: flex;
   position: relative;
   height: 35vh;
@@ -1758,12 +1760,12 @@ input[type="checkbox"]:checked + .col-section h3::after {
   font-weight: 500;
   line-height: 1.5em;
   width: 100%;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   margin-bottom: 2vh;
 }
 
 #page-a2 {
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   display: flex;
   position: relative;
   height: 100vw;
@@ -1809,14 +1811,14 @@ input[type="checkbox"]:checked + .col-section h3::after {
   font-weight: 500;
   line-height: 1.5em;
   width: 100%;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   margin-bottom: 2vh;
 }
 
 #page-a3,
 #page-a5,
 #page-a7 {
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   display: flex;
   position: relative;
   height: 100vh;
@@ -1852,14 +1854,14 @@ input[type="checkbox"]:checked + .col-section h3::after {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: var(--FC_D);
+  color: var(--WHITE);
   font-size: 2vw;
 }
 
 #page-a4,
 #page-a6,
 #page-a8 {
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   display: flex;
   position: relative;
   height: 40vw;
@@ -1908,7 +1910,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   font-weight: 500;
   line-height: 1.5em;
   width: 100%;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
   margin-bottom: 2vh;
 }
 
@@ -2427,7 +2429,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--BG_L);
+  background-color: var(--WHITE);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding-bottom: 20px;
@@ -2503,7 +2505,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
 .footer-breadcrumbs p:first-child {
   position: relative;
   top: -2px;
-  color: var(--FC_FADE);
+  color: var(--GRAY35);
 }
 
 .footer-legal-copyright {
