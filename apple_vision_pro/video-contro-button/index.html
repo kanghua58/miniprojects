@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="video-with-control">
+      <video
+        src="image/large.mp4"
+        class="intro-video"
+        autoplay
+        loop
+        muted
+      ></video>
+      <svg class="progress-svg" width="50" height="50" viewBox="0 0 50 50">
+        <circle
+          class="progress-bg"
+          cx="25"
+          cy="25"
+          r="22.5"
+          fill="none"
+          stroke-width="3"
+        />
+        <circle
+          class="progress-indicator"
+          cx="25"
+          cy="25"
+          r="22.5"
+          fill="none"
+          stroke-width="3"
+          stroke-dasharray="141.37"
+          stroke-dashoffset="141.37"
+        />
+      </svg>
+      <button class="on-off">
+        <img src="image/pause_icon.png" width="40px" height="40px" alt="" />
+      </button>
+    </div>
+
+    <script src="script/main.js"></script>
+  </body>
+</html>
