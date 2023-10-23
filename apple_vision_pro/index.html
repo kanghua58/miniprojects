@@ -154,6 +154,7 @@ Parts of the animation mot working in index.html, please refer to the individual
 
         <div id="intro1">
           <video
+            class="intro-video"
             src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-spatial-computing/large.mp4"
             autoplay
             loop
@@ -164,6 +165,34 @@ Parts of the animation mot working in index.html, please refer to the individual
             Welcome to the era of <br />
             spatial computing.
           </h1>
+          <svg class="progress-svg" width="50" height="50" viewBox="0 0 50 50">
+            <circle
+              class="progress-bg"
+              cx="25"
+              cy="25"
+              r="22.5"
+              fill="none"
+              stroke-width="3"
+            />
+            <circle
+              class="progress-indicator"
+              cx="25"
+              cy="25"
+              r="22.5"
+              fill="none"
+              stroke-width="3"
+              stroke-dasharray="141.37"
+              stroke-dashoffset="141.37"
+            />
+          </svg>
+          <button class="on-off">
+            <img
+              src="images/pause_icon.png"
+              width="40px"
+              height="40px"
+              alt=""
+            />
+          </button>
         </div>
 
         <div id="intro2">
