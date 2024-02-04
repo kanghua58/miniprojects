@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fluency Building Game</title>
+    <meta name="Author" content="Kay Qiu" />
+    <link
+      rel="shortcut icon"
+      href="/images/favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      body {
+        background: black;
+      }
+
+      .game_container {
+        position: absolute;
+        width: 500px;
+        height: 530px;
+        left: 50%;
+        top: 50%;
+        margin-left: -250px;
+        margin-top: -265px;
+        border: 2px solid #000;
+      }
+
+      #game_info {
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        width: 100px;
+        height: 530px;
+        background: #e0e0e0;
+      }
+
+      #game_info dl {
+        list-style: none;
+        margin-top: 10px;
+      }
+
+      #game_info dl dt {
+        font-weight: bold;
+        font-family: "DM Mono";
+        font-size: 10px;
+        text-indent: 10px;
+      }
+
+      #game_info dl dd {
+        font-size: 10px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      #game_info p {
+        padding-top: 20px;
+        font-size: 8px;
+        line-height: 10px;
+        text-align: left;
+        padding-left: 11px;
+      }
+
+      #game_info #gameCent,
+      #game_info #gameLevel {
+        font-weight: bold;
+        color: #396563;
+        font-size: 10px;
+        font-family: "DM Mono";
+        margin: 0 2px;
+      }
+
+      #game_info .life_bar_box {
+        display: inline-block;
+        margin-left: 8px;
+        height: 12px;
+        width: 82px;
+        border: 1px solid #000;
+        box-shadow: 2px 1px 5px #ccc;
+        border-radius: 2px 2px;
+        line-height: normal;
+        _overflow: hidden;
+      }
+
+      #game_box {
+        left: 100px;
+        top: 0px;
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        background: url(images/bg.jpg) no-repeat -600px -160px;
+        overflow: hidden;
+      }
+
+      #game_box .bg_layer {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        z-index: 2;
+      }
+
+      .car_bar {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        height: 70px;
+        z-index: 9;
+      }
+
+      .car_bar .car {
+        position: absolute;
+        height: 70px;
+        width: 50px;
+        background: url(images/jie.png) no-repeat;
+      }
+
+      .thing {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        background-color: black; /* 设置背景颜色为黑色 */
+        color: white; /* 设置文字颜色为白色 */
+        text-align: center; /* 文字居中对齐 */
+        line-height: 30px; /* 设置行高以垂直居中文字 */
+        border-radius: 5px; /* 可选：为单词添加圆角 */
+        font-size: 8px;
+      }
+
+      #game_box .tip_box {
+        position: absolute;
+        display: inline-block;
+        background: url(images/kiss.png) no-repeat left top;
+        width: 45px;
+        height: 16px;
+        z-index: 11;
+      }
+
+      #game_box .tip_box.miss {
+        background-position: 0px 0px;
+      }
+
+      #game_box .tip_box.kiss {
+        background-position: 0px -18px;
+      }
+
+      #game_box .tip_box.bomb {
+        background-position: 0px -37px;
+        width: 94px;
+        height: 61px;
+      }
+
+      #game_box .game_over_tip {
+        color: red;
+        text-shadow: 1px 1px 5px blue;
+        font-family: "DM Mono";
+      }
+
+      #game_control {
+        position: absolute;
+        bottom: 0px;
+        left: 100px;
+        width: 400px;
+        margin: 0 auto;
+        background: #acc2ba;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      #game_control button {
+        /* Simplified button styles for a more minimalist look */
+        background-color: #749775; /* A pleasant green */
+        border: none; /* Remove borders */
+        color: white; /* White text */
+        padding: 5px 24px; /* Spacing inside the button */
+        text-align: center; /* Center the text */
+        text-decoration: none; /* No underlines */
+        display: inline-block; /* Allow buttons to sit side by side */
+        font-size: 10px; /* Larger, more readable text */
+        margin: 0px 2px 0px 2px; /* Spacing between buttons */
+        transition-duration: 0.4s; /* Smooth transition for mouse hover effects */
+        cursor: pointer; /* Change cursor to indicate clickable */
+      }
+
+      #game_control button:hover {
+        background-color: white; /* Button turns white on hover */
+        color: black; /* Text turns black on hover */
+      }
+      * {
+        font-family: "DM Mono";
+      }
+
+      .positive-feedback {
+        color: rgb(54, 142, 54);
+        /* 其他样式 */
+      }
+
+      .negative-feedback {
+        color: rgb(229, 81, 81);
+        /* 其他样式 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game_container">
+      <!-- Game Info Start -->
+      <div id="game_info">
+        <dl>
+          <dt>Current Score</dt>
+          <dd id="gameCent">0</dd>
+          <dt>Countdown</dt>
+          <dd id="Countdown">60</dd>
+          <dt>Controls</dt>
+          <dd
+            style="
+              font-size: 8px;
+              line-height: 10px;
+              text-align: left;
+              padding-left: 11px;
+            "
+          >
+            ←/→ move <br />s change basket
+          </dd>
+        </dl>
+        <p>
+          Welcome to the Phoneme Catcher Game! Your task is to catch falling
+          words that match the phoneme shown on your basket. Use the left and
+          right arrow keys to move the basket and score points for every correct
+          word you catch. Avoid incorrect words, as they will cost you points or
+          health. The game's pace increases with each level, introducing new
+          phonemes and challenges. Aim for the highest score by quickly and
+          accurately catching the right words. Enjoy sharpening your phonemic
+          awareness skills!
+        </p>
+      </div>
+      <!-- Game Info End -->
+
+      <!-- Game Screen Start -->
+      <div id="game_box">
+        <div class="bg_layer"></div>
+        <!--<span class='game_over_tip'>Game Over!</span>-->
+        <div class="car_bar">
+          <div id="carBox" class="car"></div>
+        </div>
+      </div>
+      <!-- Game Screen End -->
+
+      <!-- Game Control Start -->
+      <div id="game_control">
+        <button id="btnStart">Start</button>
+        <button id="btnPause">Pause</button>
+      </div>
+      <!-- Game Control End -->
+    </div>
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/game1.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#btnStart").click(function () {
+          wordGame.Start();
+        });
+
+        $("#btnPause").click(function () {
+          wordGame.PauseGame();
+        });
+      });
+    </script>
+  </body>
+</html>
