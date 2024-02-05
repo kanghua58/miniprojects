@@ -350,22 +350,36 @@ wordGame.prototype.SwitchBasketTag = function() {
     $(element).data('moveInterval', _move); // 存储每个单词移动的间隔ID
   };
 
-  wordGame.prototype.ShowFeedback = function(isPositive, position) {
+  wordGame.prototype.ShowFeedback = function(isPositive) {
     var feedbackClass = isPositive ? 'positive-feedback' : 'negative-feedback';
     var feedbackText = isPositive ? 'Good!' : 'Oops!';
     var feedbackElement = $('<div class="' + feedbackClass + '">' + feedbackText + '</div>');
+  
+    // Get the position and dimensions of the basket (carBox)
+    var basketPosition = this.Setting.CarBox.position();
+    var basketWidth = this.Setting.CarBox.width();
+    var basketHeight = this.Setting.CarBox.height();
+  
+    // Calculate the position for the feedback to appear above the basket
+    var feedbackTop = basketPosition.top + 400; // 10px above the basket
+    var feedbackLeft = basketPosition.left + (basketWidth / 2) - (feedbackElement.width() / 2); // Centered above the basket
+  
+    // Apply calculated positions to the feedback element
     feedbackElement.css({
-      left: position.left + 'px',
-      top: position.top + 'px'
+      left: feedbackLeft + 'px',
+      top: feedbackTop + 'px',
+      position: 'absolute' // Ensure the feedback is positioned absolutely within the game container
     });
+  
+    // Append the feedback element to the game box and set it to fade out after a short duration
     this.Setting.GameBox.append(feedbackElement);
     setTimeout(function() {
       feedbackElement.fadeOut(300, function() {
-        $(this).remove();
+        $(this).remove(); // Remove the feedback element after fading out
       });
-    }, 1000);
+    }, 2000);
   };
-
+  
 
 
   wordGame.prototype.WordCatchCheck = function(element, moveInterval) {
